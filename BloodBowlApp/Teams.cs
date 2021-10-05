@@ -11,11 +11,11 @@ namespace BloodBowlApp
         private String Examples;
         private String STYLE;
         private int ReRoll;
-        private Boolean Appo;
+        private String Appo;
         private String SpecialRules;
         private int Tier;
 
-        public Teams(int iD, string teamName, string examples, string sTYLE, int reRoll, bool appo, string specialRules, int tier)
+        public Teams(int iD, string teamName, string examples, string sTYLE, int reRoll, string appo, string specialRules, int tier)
         {
             ID1 = iD;
             TeamName1 = teamName;
@@ -32,7 +32,7 @@ namespace BloodBowlApp
         public string Examples1 { get => Examples; set => Examples = value; }
         public string STYLE1 { get => STYLE; set => STYLE = value; }
         public int ReRoll1 { get => ReRoll; set => ReRoll = value; }
-        public bool Appo1 { get => Appo; set => Appo = value; }
+        public string Appo1 { get => Appo; set => Appo = value; }
         public string SpecialRules1 { get => SpecialRules; set => SpecialRules = value; }
         public int Tier1 { get => Tier; set => Tier = value; }
     }

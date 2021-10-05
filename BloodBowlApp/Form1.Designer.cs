@@ -51,7 +51,7 @@ namespace BloodBowlApp
             this.radioButtonOldWorldAlliance = new System.Windows.Forms.RadioButton();
             this.radioButtonShamblingUndead = new System.Windows.Forms.RadioButton();
             this.radioButtonNecromaticHorrors = new System.Windows.Forms.RadioButton();
-            this.radioButton5Humans = new System.Windows.Forms.RadioButton();
+            this.radioButtonHumans = new System.Windows.Forms.RadioButton();
             this.stuntyTab = new System.Windows.Forms.TabPage();
             this.radioButtonGoblins = new System.Windows.Forms.RadioButton();
             this.radioButtonOgres = new System.Windows.Forms.RadioButton();
@@ -122,6 +122,7 @@ namespace BloodBowlApp
             this.radioButtonUnderworldDenizens.TabStop = true;
             this.radioButtonUnderworldDenizens.Text = "Underworld Denizens";
             this.radioButtonUnderworldDenizens.UseVisualStyleBackColor = false;
+            this.radioButtonUnderworldDenizens.Click += new System.EventHandler(this.radioButtonUnderworldDenizens_Click);
             // 
             // radioButtonOrc
             // 
@@ -136,6 +137,7 @@ namespace BloodBowlApp
             this.radioButtonOrc.TabStop = true;
             this.radioButtonOrc.Text = "Orc";
             this.radioButtonOrc.UseVisualStyleBackColor = false;
+            this.radioButtonOrc.Click += new System.EventHandler(this.radioButtonOrc_Click);
             // 
             // radioButtonNurgle
             // 
@@ -150,6 +152,7 @@ namespace BloodBowlApp
             this.radioButtonNurgle.TabStop = true;
             this.radioButtonNurgle.Text = "Nurgle";
             this.radioButtonNurgle.UseVisualStyleBackColor = false;
+            this.radioButtonNurgle.Click += new System.EventHandler(this.radioButtonNurgle_Click);
             // 
             // radioButtonLizardmen
             // 
@@ -162,8 +165,9 @@ namespace BloodBowlApp
             this.radioButtonLizardmen.Size = new System.Drawing.Size(130, 32);
             this.radioButtonLizardmen.TabIndex = 4;
             this.radioButtonLizardmen.TabStop = true;
-            this.radioButtonLizardmen.Text = "Lizardman";
+            this.radioButtonLizardmen.Text = "Lizardmen";
             this.radioButtonLizardmen.UseVisualStyleBackColor = false;
+            this.radioButtonLizardmen.Click += new System.EventHandler(this.radioButtonLizardmen_Click);
             // 
             // radioButtonChaosRenegades
             // 
@@ -178,6 +182,7 @@ namespace BloodBowlApp
             this.radioButtonChaosRenegades.TabStop = true;
             this.radioButtonChaosRenegades.Text = "Chaos Renegades";
             this.radioButtonChaosRenegades.UseVisualStyleBackColor = false;
+            this.radioButtonChaosRenegades.Click += new System.EventHandler(this.radioButtonChaosRenegades_Click);
             // 
             // Dwarfs
             // 
@@ -192,6 +197,7 @@ namespace BloodBowlApp
             this.Dwarfs.TabStop = true;
             this.Dwarfs.Text = "Dwarfs";
             this.Dwarfs.UseVisualStyleBackColor = false;
+            this.Dwarfs.Click += new System.EventHandler(this.Dwarfs_Click);
             // 
             // radioButtonChaosChosen
             // 
@@ -206,6 +212,7 @@ namespace BloodBowlApp
             this.radioButtonChaosChosen.TabStop = true;
             this.radioButtonChaosChosen.Text = "Chaos Chosen";
             this.radioButtonChaosChosen.UseVisualStyleBackColor = false;
+            this.radioButtonChaosChosen.Click += new System.EventHandler(this.radioButtonChaosChosen_Click);
             // 
             // radioButtonBlackOrcs
             // 
@@ -220,7 +227,6 @@ namespace BloodBowlApp
             this.radioButtonBlackOrcs.TabStop = true;
             this.radioButtonBlackOrcs.Text = "Black Orcs";
             this.radioButtonBlackOrcs.UseVisualStyleBackColor = false;
-            this.radioButtonBlackOrcs.CheckedChanged += new System.EventHandler(this.radioButtonBlackOrcs_CheckedChanged);
             this.radioButtonBlackOrcs.Click += new System.EventHandler(this.radioButtonBlackOrcs_Click);
             // 
             // agilityTab
@@ -252,6 +258,7 @@ namespace BloodBowlApp
             this.radioButtonWoodElves.TabStop = true;
             this.radioButtonWoodElves.Text = "Wood Elves";
             this.radioButtonWoodElves.UseVisualStyleBackColor = false;
+            this.radioButtonWoodElves.Click += new System.EventHandler(this.radioButtonWoodElves_Click);
             // 
             // radioButtonSkaven
             // 
@@ -266,6 +273,7 @@ namespace BloodBowlApp
             this.radioButtonSkaven.TabStop = true;
             this.radioButtonSkaven.Text = "Skaven";
             this.radioButtonSkaven.UseVisualStyleBackColor = false;
+            this.radioButtonSkaven.Click += new System.EventHandler(this.radioButtonSkaven_Click);
             // 
             // radioButtonElvenUnion
             // 
@@ -280,6 +288,7 @@ namespace BloodBowlApp
             this.radioButtonElvenUnion.TabStop = true;
             this.radioButtonElvenUnion.Text = "Elven Union";
             this.radioButtonElvenUnion.UseVisualStyleBackColor = false;
+            this.radioButtonElvenUnion.Click += new System.EventHandler(this.radioButtonElvenUnion_Click);
             // 
             // radioButtonDarkElves
             // 
@@ -294,6 +303,7 @@ namespace BloodBowlApp
             this.radioButtonDarkElves.TabStop = true;
             this.radioButtonDarkElves.Text = "Dark Elves";
             this.radioButtonDarkElves.UseVisualStyleBackColor = false;
+            this.radioButtonDarkElves.Click += new System.EventHandler(this.radioButtonDarkElves_Click);
             // 
             // hybridTab
             // 
@@ -303,7 +313,7 @@ namespace BloodBowlApp
             this.hybridTab.Controls.Add(this.radioButtonOldWorldAlliance);
             this.hybridTab.Controls.Add(this.radioButtonShamblingUndead);
             this.hybridTab.Controls.Add(this.radioButtonNecromaticHorrors);
-            this.hybridTab.Controls.Add(this.radioButton5Humans);
+            this.hybridTab.Controls.Add(this.radioButtonHumans);
             this.hybridTab.Location = new System.Drawing.Point(4, 24);
             this.hybridTab.Name = "hybridTab";
             this.hybridTab.Size = new System.Drawing.Size(603, 280);
@@ -324,6 +334,7 @@ namespace BloodBowlApp
             this.radioButtonImperialNobility.TabStop = true;
             this.radioButtonImperialNobility.Text = "Imperial Nobility";
             this.radioButtonImperialNobility.UseVisualStyleBackColor = false;
+            this.radioButtonImperialNobility.Click += new System.EventHandler(this.radioButtonImperialNobility_Click);
             // 
             // radioButtonOldWorldAlliance
             // 
@@ -338,6 +349,7 @@ namespace BloodBowlApp
             this.radioButtonOldWorldAlliance.TabStop = true;
             this.radioButtonOldWorldAlliance.Text = "Old World Alliance";
             this.radioButtonOldWorldAlliance.UseVisualStyleBackColor = false;
+            this.radioButtonOldWorldAlliance.Click += new System.EventHandler(this.radioButtonOldWorldAlliance_Click);
             // 
             // radioButtonShamblingUndead
             // 
@@ -352,6 +364,7 @@ namespace BloodBowlApp
             this.radioButtonShamblingUndead.TabStop = true;
             this.radioButtonShamblingUndead.Text = "Shambling Undead";
             this.radioButtonShamblingUndead.UseVisualStyleBackColor = false;
+            this.radioButtonShamblingUndead.Click += new System.EventHandler(this.radioButtonShamblingUndead_Click);
             // 
             // radioButtonNecromaticHorrors
             // 
@@ -366,20 +379,22 @@ namespace BloodBowlApp
             this.radioButtonNecromaticHorrors.TabStop = true;
             this.radioButtonNecromaticHorrors.Text = "Necromatic Horrors";
             this.radioButtonNecromaticHorrors.UseVisualStyleBackColor = false;
+            this.radioButtonNecromaticHorrors.Click += new System.EventHandler(this.radioButtonNecromaticHorrors_Click);
             // 
-            // radioButton5Humans
+            // radioButtonHumans
             // 
-            this.radioButton5Humans.AutoSize = true;
-            this.radioButton5Humans.BackColor = System.Drawing.Color.Cyan;
-            this.radioButton5Humans.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton5Humans.ForeColor = System.Drawing.Color.DarkRed;
-            this.radioButton5Humans.Location = new System.Drawing.Point(119, 73);
-            this.radioButton5Humans.Name = "radioButton5Humans";
-            this.radioButton5Humans.Size = new System.Drawing.Size(82, 31);
-            this.radioButton5Humans.TabIndex = 0;
-            this.radioButton5Humans.TabStop = true;
-            this.radioButton5Humans.Text = "Humans";
-            this.radioButton5Humans.UseVisualStyleBackColor = false;
+            this.radioButtonHumans.AutoSize = true;
+            this.radioButtonHumans.BackColor = System.Drawing.Color.Cyan;
+            this.radioButtonHumans.Font = new System.Drawing.Font("Onyx", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonHumans.ForeColor = System.Drawing.Color.DarkRed;
+            this.radioButtonHumans.Location = new System.Drawing.Point(119, 73);
+            this.radioButtonHumans.Name = "radioButtonHumans";
+            this.radioButtonHumans.Size = new System.Drawing.Size(82, 31);
+            this.radioButtonHumans.TabIndex = 0;
+            this.radioButtonHumans.TabStop = true;
+            this.radioButtonHumans.Text = "Humans";
+            this.radioButtonHumans.UseVisualStyleBackColor = false;
+            this.radioButtonHumans.Click += new System.EventHandler(this.radioButtonHumans_Click);
             // 
             // stuntyTab
             // 
@@ -404,9 +419,9 @@ namespace BloodBowlApp
             this.radioButtonGoblins.Name = "radioButtonGoblins";
             this.radioButtonGoblins.Size = new System.Drawing.Size(126, 40);
             this.radioButtonGoblins.TabIndex = 3;
-            this.radioButtonGoblins.TabStop = true;
             this.radioButtonGoblins.Text = "Goblins";
             this.radioButtonGoblins.UseVisualStyleBackColor = false;
+            this.radioButtonGoblins.Click += new System.EventHandler(this.radioButtonGoblins_Click);
             // 
             // radioButtonOgres
             // 
@@ -417,9 +432,9 @@ namespace BloodBowlApp
             this.radioButtonOgres.Name = "radioButtonOgres";
             this.radioButtonOgres.Size = new System.Drawing.Size(143, 30);
             this.radioButtonOgres.TabIndex = 2;
-            this.radioButtonOgres.TabStop = true;
             this.radioButtonOgres.Text = "Ogres";
             this.radioButtonOgres.UseVisualStyleBackColor = false;
+            this.radioButtonOgres.Click += new System.EventHandler(this.radioButtonOgres_Click);
             // 
             // radioButtonsnotlings
             // 
@@ -430,14 +445,15 @@ namespace BloodBowlApp
             this.radioButtonsnotlings.Name = "radioButtonsnotlings";
             this.radioButtonsnotlings.Size = new System.Drawing.Size(97, 30);
             this.radioButtonsnotlings.TabIndex = 1;
-            this.radioButtonsnotlings.TabStop = true;
             this.radioButtonsnotlings.Text = "Snotlings";
             this.radioButtonsnotlings.UseVisualStyleBackColor = false;
+            this.radioButtonsnotlings.Click += new System.EventHandler(this.radioButtonsnotlings_Click);
             // 
             // radioButtonHalflings
             // 
             this.radioButtonHalflings.AutoSize = true;
             this.radioButtonHalflings.BackColor = System.Drawing.Color.Goldenrod;
+            this.radioButtonHalflings.Checked = true;
             this.radioButtonHalflings.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonHalflings.Location = new System.Drawing.Point(98, 64);
             this.radioButtonHalflings.Name = "radioButtonHalflings";
@@ -446,6 +462,7 @@ namespace BloodBowlApp
             this.radioButtonHalflings.TabStop = true;
             this.radioButtonHalflings.Text = "Halflings";
             this.radioButtonHalflings.UseVisualStyleBackColor = false;
+            this.radioButtonHalflings.Click += new System.EventHandler(this.radioButtonHalflings_Click);
             // 
             // Form1
             // 
@@ -498,7 +515,7 @@ namespace BloodBowlApp
         private System.Windows.Forms.RadioButton radioButtonOldWorldAlliance;
         private System.Windows.Forms.RadioButton radioButtonShamblingUndead;
         private System.Windows.Forms.RadioButton radioButtonNecromaticHorrors;
-        private System.Windows.Forms.RadioButton radioButton5Humans;
+        private System.Windows.Forms.RadioButton radioButtonHumans;
         private System.Windows.Forms.RadioButton radioButtonGoblins;
         private System.Windows.Forms.RadioButton radioButtonOgres;
         private System.Windows.Forms.RadioButton radioButtonsnotlings;

@@ -10,4 +10,10 @@
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BloodBowlConcept.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
