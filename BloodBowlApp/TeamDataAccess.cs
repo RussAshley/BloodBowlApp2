@@ -45,7 +45,38 @@ namespace BloodBowlApp
             return result;
         }
 
+        public Positions ReadPositionsData(string teamName)
+        {
+            Positions result = new Positions(0,0,0,"",0,0,0,0,0,0,"","","");
+            using (var connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
 
+                var command = connection.CreateCommand();
+                command.CommandText = $"SELECT* FROM teamdetails WHERE teamdetailsID= 
+                command.Parameters.AddWithValue("@TeamName", teamName);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.ID1 = reader.GetInt32(0);
+                        result.TeamdetailsID = reader.GetInt32(1);
+                        result.Qty = reader.GetInt32(2);
+                        result.Position = reader.GetString(3);
+                        result.Cost = reader.GetInt32(4);
+                        result.Ma1 = reader.GetInt32(5);
+                        result.St = reader.GetInt32(6);
+                        result.Ag= reader.GetInt32(7);
+                        result.Pa = reader.GetInt32(8);
+                        result.Av = reader.GetInt32(9);
+                        result.Skills = reader.GetString(10);
+                        result.Primary = reader.GetString(11);
+                        result.Secondary = reader.GetString(12);
+                    }
+                }
+            }
+            return result;
+        }
 
 
     }
