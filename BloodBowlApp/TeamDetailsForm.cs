@@ -13,8 +13,10 @@ namespace BloodBowlApp
     {
         static TeamDataAccess tda = new TeamDataAccess("Data Source=BloodBowlConcept.db");
         Teams team;
+        Positions position;
         int index = 0;
         string teamName;
+        
 
         public TeamDetailsForm()
         {
@@ -26,13 +28,17 @@ namespace BloodBowlApp
             InitializeComponent();
             this.teamName = teamName;
            team = tda.ReadTeamData(teamName);
-            textBoxTeamName.Text = team.TeamName1;
+            position = tda.ReadPositionsData(team.ID1);
+                
+                textBoxTeamName.Text = team.TeamName1;
             textBox1FamousTeams.Text = team.Examples1;
             textBoxStyle.Text = team.STYLE1;
             textBoxReRoll.Text = team.ReRoll1.ToString();
             textBoxSpecialRules.Text = team.SpecialRules1;
             textBox4Appo.Text = team.Appo1;
             textBoxTier.Text = team.Tier1.ToString();
+            textBoxpositiondetails.Text = position.DisplayAsAString();
+            
 
         }
 

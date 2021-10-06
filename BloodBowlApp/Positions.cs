@@ -50,5 +50,13 @@ namespace BloodBowlApp
         public string Skills { get => skills; set => skills = value; }
         public string Primary { get => primary; set => primary = value; }
         public string Secondary { get => secondary; set => secondary = value; }
+
+
+        public string DisplayAsAString()
+        {
+            return $"{qty} {position}";
+        }
     }
+
+
 }

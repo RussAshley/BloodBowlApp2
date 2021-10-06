@@ -42,6 +42,7 @@ namespace BloodBowlApp
             this.label1SpecialRules = new System.Windows.Forms.Label();
             this.label1Appo = new System.Windows.Forms.Label();
             this.label1Tier = new System.Windows.Forms.Label();
+            this.textBoxpositiondetails = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxTeamName
@@ -173,12 +174,21 @@ namespace BloodBowlApp
             this.label1Tier.TabIndex = 12;
             this.label1Tier.Text = "Tier";
             // 
+            // textBoxpositiondetails
+            // 
+            this.textBoxpositiondetails.Location = new System.Drawing.Point(86, 180);
+            this.textBoxpositiondetails.Multiline = true;
+            this.textBoxpositiondetails.Name = "textBoxpositiondetails";
+            this.textBoxpositiondetails.Size = new System.Drawing.Size(621, 214);
+            this.textBoxpositiondetails.TabIndex = 13;
+            // 
             // TeamDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxpositiondetails);
             this.Controls.Add(this.label1Tier);
             this.Controls.Add(this.label1Appo);
             this.Controls.Add(this.label1SpecialRules);
@@ -215,5 +225,6 @@ namespace BloodBowlApp
         private System.Windows.Forms.Label label1SpecialRules;
         private System.Windows.Forms.Label label1Appo;
         private System.Windows.Forms.Label label1Tier;
+        private System.Windows.Forms.TextBox textBoxpositiondetails;
     }
 }

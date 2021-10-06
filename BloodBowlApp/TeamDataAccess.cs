@@ -45,7 +45,7 @@ namespace BloodBowlApp
             return result;
         }
 
-        public Positions ReadPositionsData(string teamName)
+        public Positions ReadPositionsData(int mainID)
         {
             Positions result = new Positions(0,0,0,"",0,0,0,0,0,0,"","","");
             using (var connection = new SQLiteConnection(ConnectionString))
@@ -53,8 +53,8 @@ namespace BloodBowlApp
                 connection.Open();
 
                 var command = connection.CreateCommand();
-                command.CommandText = $"SELECT* FROM teamdetails WHERE teamdetailsID= 
-                command.Parameters.AddWithValue("@TeamName", teamName);
+                command.CommandText = $"SELECT* FROM teamdetails WHERE teamdetailsID=@teamdetailsID"; 
+                command.Parameters.AddWithValue("@teamdetailsID", mainID);
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
